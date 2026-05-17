@@ -8,7 +8,6 @@
     --color-text-muted: #636366;
     --color-accent: #2200ff;
     --color-accent-glow: rgba(0, 113, 227, 0.15);
-
     --font-principal: "Barlow", sans-serif;
 
   
@@ -34,13 +33,52 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+article {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+}
+
+#bio {
+    flex: 0 0 40%;
+}
+
+#bio img {
+    width: 100%;
+    height: 60vh;
+    border-radius: 4rem;
+    object-fit: cover;
+    object-position: left center; /* esto es lo que movés */
+
+}
+
+
+#bio_text {
+    flex: 1;
+}
+
+#bio_text h3 {
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    margin: auto;
+    padding: auto;
+}
+
+
+
+#bio_text h3:first-of-type {
+    margin-top: 0.5rem;
+}
+
 .intro h3 { 
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 900;
     padding: 2rem;
     margin: 3rem;
-    color: #ffffff8c;
+    color: #ffffff;
 }
 
 .intro p {
@@ -141,10 +179,10 @@ nav ul li a:active {
     color: var(--color-accent);
 }
 
+
 /* === HERO === */
 .hero {
     position: relative;
-    background: rgb(10, 10, 11);
     width: 100%;
     height: 100vh;
     display: flex;
@@ -156,12 +194,27 @@ nav ul li a:active {
 }
 
 .hero-image {
-    width: 50%;
-    height: auto;
-    padding: flex;
-    margin: flex;
-    border-radius: 80px;
-    }
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    filter: brightness(0.6);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent 50%, rgba(0, 0, 0, 0.5));
+    z-index: 1;
+    pointer-events: none;
+}
 
 .hero-content {
     position: relative;
@@ -174,10 +227,9 @@ nav ul li a:active {
     font-size: 3.4rem;
     font-weight: 700;
     padding: 0;
-    margin: 3.4rem;
+    margin: 0 0 1rem 0;
     color: var(--color-text-primary);
-    letter-spacing: 0em;
-    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
     line-height: 1.05;
 }
 
@@ -187,6 +239,8 @@ nav ul li a:active {
     color: var(--color-text-secondary);
     letter-spacing: 0.02em;
 }
+
+
 
 /* === CONTENEDOR PRINCIPAL === */
 .main-container {
@@ -212,7 +266,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 0.75rem;
     letter-spacing: -0.02em;
 }
@@ -220,6 +274,7 @@ h2 {
 h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    font-weight: 400;
     position: relative;
 }
 
@@ -416,7 +471,6 @@ em {
     font-style: italic;
 }
 
-/* === FOCUS ACCESIBILIDAD === */
 :focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 0.25rem;
