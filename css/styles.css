@@ -1,4 +1,4 @@
-/* === VARIABLES === */
+/* === VARIABLES / DECLARACIÓN DE USO DE IA === */
 :root {
     --color-bg: #0a0a0b;
     --color-surface: rgba(0, 0, 0, 0.85);
@@ -47,7 +47,7 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     position: fixed;
     top: 0;
     z-index: 100;
@@ -178,13 +178,14 @@ nav ul li a:active {
 .main-container {
     max-width: 1600px;
     width: 90%;
-    margin: 2rem auto;
-    padding: 1.25rem;
+    margin: 3rem;
+    padding: 3rem;
+    border-radius: 5rem;
     background: rgb(3, 3, 3);
 
 }
 
-/* === TIPOGRAFÍA === */
+/* === TIPOGRAFÍA / DECLARACIÓN USO DE IA PARA ORGANIZAR ESTILOS DE TEXTO === */
 h1, h2, h3 {
     font-family: var(--font-principal);
     font-weight: 700;
@@ -342,7 +343,7 @@ section:first-child {
     color: var(--color-text-primary);
 }
 
-/* === BIOGRAFÍA === */
+
 /* === BIOGRAFÍA === */
 .bio-layout {
     display: flex;
@@ -356,12 +357,11 @@ section:first-child {
 }
 
 #bio img {
-    width: 90%;
-    height: 60vh;
+    width: 100%;
+    height: 80vh;
     border-radius: 5rem;
-    left: 3rem;
     object-fit: cover;
-    object-position: left center;
+    object-position: right center;
 }
 
 #bio_text {
@@ -420,38 +420,8 @@ img {
     transform: scale(1.02);
 }
 
-/* === BOTÓN VER MÁS === */
-.btn-ver-mas {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 0.75rem 2rem;
-    font-family: var(--font-principal);
-    font-size: 0.875rem;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--color-text-primary);
-    border: 1px solid var(--color-border);
-    border-radius: 2rem;
-    background: transparent;
-    transition:
-        background var(--transition-fast),
-        color var(--transition-fast),
-        border-color var(--transition-fast),
-        transform var(--transition-fast);
-}
 
-.btn-ver-mas:hover {
-    background: var(--color-text-primary);
-    color: var(--color-bg);
-    border-color: var(--color-text-primary);
-    transform: translateY(-2px);
-}
 
-.btn-ver-mas:active {
-    transform: translateY(0);
-}
 
 /* === VIDEO === */
 .video-container {
